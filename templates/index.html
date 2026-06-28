@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lahrour Abdeladime — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="avatar-frame">
+      <img src="{{ url_for('static', filename='img/profile.jpg') }}" alt="Photo de Lahrour Abdeladime">
+    </div>
+
+    <h1 class="identity">Lahrour<br>Abdeladime</h1>
+    <p class="role-line">Développeur web &amp; passionné de cybersécurité</p>
+
+    <ul class="contact-list">
+      <li><span class="label">Téléphone</span><a href="tel:0616460988">06 16 46 09 88</a></li>
+      <li><span class="label">Email</span><a href="mailto:abdelaadime2@gmail.com">abdelaadime2@gmail.com</a></li>
+      <li><span class="label">Site</span><a href="https://lahrour.vercel.app" target="_blank" rel="noopener">lahrour.vercel.app</a></li>
+      <li><span class="label">Ville</span><span>Mogran, Kenitra</span></li>
+    </ul>
+
+    <nav class="sidenav" aria-label="Navigation">
+      <a href="#about">À propos</a>
+      <a href="#skills">Compétences</a>
+      <a href="#education">Études</a>
+      <a href="#experience">Expérience</a>
+      <a href="#languages">Langues</a>
+      <a href="#interests">Centres d'intérêt</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="intro-card">
+        <p class="intro-line"><span id="typedCmd"></span><span class="cursor">▍</span></p>
+        <div id="typedOutput" class="intro-output"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="block" id="skills">
+      <h2 class="block-title">Compétences</h2>
+      <div class="skills-grid" id="skillsGrid"><!-- injected by JS --></div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="block" id="education">
+      <h2 class="block-title">Études</h2>
+      <div class="log-list" id="educationList"><!-- injected by JS --></div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="block" id="experience">
+      <h2 class="block-title">Expérience</h2>
+      <div class="exp-list" id="experienceList"><!-- injected by JS --></div>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section class="block" id="languages">
+      <h2 class="block-title">Langues</h2>
+      <div class="lang-list" id="languagesList"><!-- injected by JS --></div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section class="block" id="interests">
+      <h2 class="block-title">Centres d'intérêt</h2>
+      <div class="interests-grid" id="interestsGrid"><!-- injected by JS --></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="block" id="contact">
+      <h2 class="block-title">Me contacter</h2>
+      <p class="contact-intro">Une question, une opportunité, une idée de collaboration ? Écrivez un message et envoyez-le directement par WhatsApp ou par email.</p>
+
+      <form class="contact-form" id="contactForm">
+        <div class="field">
+          <label for="cName">Votre nom</label>
+          <input type="text" id="cName" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="field">
+          <label for="cMessage">Votre message</label>
+          <textarea id="cMessage" name="message" rows="4" placeholder="Bonjour Abdeladime, je vous contacte au sujet de..." required></textarea>
+        </div>
+        <div class="field-row">
+          <button type="button" class="btn btn-whatsapp" id="sendWhatsapp">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.7-2.6-1.4-3.7-3.2-.1-.2 0-.4.1-.5.2-.3.5-.6.7-.9.1-.2.1-.4 0-.6-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9 1-.9 2.3 0 1.3 1 2.6 1.1 2.8.1.2 1.9 3 4.7 4.1 2.3.9 2.8.7 3.3.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.3z"/><path fill="currentColor" d="M12 2C6.5 2 2 6.4 2 11.9c0 1.9.5 3.6 1.5 5.2L2 22l5.1-1.4c1.5.8 3.2 1.3 4.9 1.3 5.5 0 10-4.4 10-9.9C22 6.4 17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.8.8-2.8-.2-.3C4.4 15 3.9 13.5 3.9 12 3.9 7.5 7.5 4 12 4s8.1 3.5 8.1 8-3.6 8-8.1 8z"/></svg>
+            Envoyer sur WhatsApp
+          </button>
+          <button type="button" class="btn btn-email" id="sendEmail">
+            Envoyer par email
+          </button>
+        </div>
+        <p class="form-hint" id="formHint"></p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>Merci d'être passé. — {{ profile.email }}</p>
+    </footer>
+
+  </main>
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
